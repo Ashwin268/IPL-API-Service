@@ -1,2 +1,2 @@
 # IPL-API-Service
-creating a API service for IPL dataset
+A Flask-based API to access IPL stats and insights from analyzed datasets.
