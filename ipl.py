@@ -2,8 +2,11 @@ import pandas as pd
 import numpy as np
 import json
 
-ipl_matches = "content/ipl-matches.csv"
-matches = pd.read_csv(ipl_matches)
+# ipl_matches = "content/ipl-matches.csv"
+# matches = pd.read_csv(ipl_matches)
+
+matches = pd.read_csv("content/matches_08-24.csv")
+
 
 print(matches.head())
 
@@ -51,7 +54,7 @@ def allRecord(team):
     won = team_df[team_df.WinningTeam == team].shape[0]
     draw = team_df[team_df.WinningTeam.isnull()].shape[0]
     loss = mp - won - draw
-    title = team_df[(team_df.MatchNumber == 'Final') & (team_df.WinningTeam == team)].shape[0]
+    title = team_df[(team_df.match_type == 'Final') & (team_df.WinningTeam == team)].shape[0]
     return {
             'matchesPlayed': mp,
             'won': won,
@@ -67,4 +70,4 @@ def teamAPI(team, matches=matches):
     against = {team2: compareTeamsApi(team, team2) for team2 in TEAMS}
     data = {team: {'overall': self_record,
                    'against': against}}
-    return json.dumps(data, cls=NpEncoder)
+    return data
