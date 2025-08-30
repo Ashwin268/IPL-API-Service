@@ -9,8 +9,8 @@ def index():
 
 @app.route('/api/teams')
 def teams():
-    teams = ipl.teams_api()
-    return jsonify(teams)
+    all_teams = ipl.teams_api()
+    return jsonify(all_teams)
 
 @app.route('/api/compareTeams')
 def compareTeams():

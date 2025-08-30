@@ -5,7 +5,7 @@ import json
 # ipl_matches = "content/ipl-matches.csv"
 # matches = pd.read_csv(ipl_matches)
 
-matches = pd.read_csv("content/matches_08-24.csv")
+matches = pd.read_csv("content/ipl_matches_cleaned.csv")
 
 
 print(matches.head())
