@@ -17,11 +17,8 @@ Get overall and head-to-head records for a specific team.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/ipl-api-service.git
+git clone https://github.com/Ashwin268/ipl-api-service.git
 cd ipl-api-service
-No, the **response examples** are not strictly required—they’re mainly for clarity so someone using your API knows what to expect.
-
-If you want a shorter, minimal **README**, you can keep just the endpoints, parameters, and instructions to run the API. Here’s a compact version ready to copy:
 ```
 
 2. Install dependencies:
