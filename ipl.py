@@ -67,7 +67,7 @@ def teamAPI(team, matches=matches):
     df = matches[(matches['Team1'] == team) | (matches['Team2'] == team)].copy()
     self_record = allRecord(team)
     TEAMS = matches.Team1.unique()
-    against = {team2: compareTeamsApi(team, team2) for team2 in TEAMS}
+    against = {team2: compareTeamsApi(team, team2) for team2 in TEAMS if team2 != team}
     data = {team: {'overall': self_record,
                    'against': against}}
     return data
